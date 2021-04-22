@@ -14,6 +14,8 @@ const notify= mongoose.Schema({
     },
 });
 
+notify.index({notification_no:1},{unique:true});
+
 const Notice= mongoose.model("Notice",notify);
 
 module.exports=Notice;

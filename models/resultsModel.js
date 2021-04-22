@@ -28,6 +28,8 @@ const resultSchema = mongoose.Schema({
     final:{type:Number,required:true},
 });
 
+resultSchema.index({id:1,class_id:1,subject_id:1},{unique:true});
+
 const Result = mongoose("Result",resultSchema);
 
 module.exports=Result;

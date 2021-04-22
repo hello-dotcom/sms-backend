@@ -26,6 +26,8 @@ const ssschema =  mongoose.Schema({
     }]
 });
 
+ssschema.index({id1:1,id2:1},{unique:true});
+
 const SS = new mongoose.model('SS',ssschema);
 
 module.exports=SS;

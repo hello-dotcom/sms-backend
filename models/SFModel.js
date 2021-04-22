@@ -20,6 +20,8 @@ const sfschema = mongoose.Schema({
     }]
 });
 
+sfschema.index({id1:1,id2:true},{unique:true});
+
 const SF = new mongoose.model("SF",sfschema);
 
 module.exports=SF;

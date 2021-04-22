@@ -20,6 +20,8 @@ const subjectschema = mongoose.Schema({
     }
 });
 
+subjectschema.index({class_id:1,subject_id:1},{unique:true});
+
 const Subject = new mongoose.model("Subject",subjectschema);
 
 module.exports= Subject;

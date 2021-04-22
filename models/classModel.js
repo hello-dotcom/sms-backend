@@ -15,6 +15,8 @@ const classschema = mongoose.Schema({
     }
 });
 
+classschema.index({class_id:1},{unique:true});
+
 const Class = new mongoose.model("Class",classschema);
 
 module.exports=Class;

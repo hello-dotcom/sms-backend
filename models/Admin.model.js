@@ -58,6 +58,8 @@ const adminSchema= mongoose.Schema({
     }
 });
 
+adminSchema.index({id:1},{unique:true});
+
 const Admin=mongoose.model('Admin',adminSchema);
 
 module.exports=Admin;

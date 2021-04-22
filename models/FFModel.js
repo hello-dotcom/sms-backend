@@ -21,6 +21,8 @@ const ffschema = mongoose.Schema({
     }]
 });
 
+ffschema.index({id1:1,id2:1},{unique:true});
+
 const FF = new mongoose.model("FF",ffschema);
 
 module.exports=FF;
